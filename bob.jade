@@ -1,0 +1,12 @@
+
+    p Here is what we used to show:
+    p [
+      = req.method
+      | ]  You hit: 
+      = req.path 
+      | . We just wanted to let you know, in case you didn\'t believe your URL bar
+
+    - if (req.body)
+      p
+        You also had this request body: 
+        = util.inspect(req.body)
